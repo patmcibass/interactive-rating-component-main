@@ -174,3 +174,45 @@ form {
     background-color: var(--White);
     color: var(--Orange);
 }
+
+@media (max-width: 450px) {
+    .container {
+        width: 340px;
+        gap: 1rem;
+    }
+
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    p {
+        font-size: 1.4rem;
+        line-height: 2rem;
+        width: 100%;
+    }
+    
+    form {
+        margin-top: 2.5rem;
+    }
+
+    #submit {
+        margin-top: 2rem;
+    }
+    #thank-you-container svg {
+        scale: .9;
+        margin-top: -.5rem;
+    }
+
+    #result {
+        margin-top: 1rem;
+    }
+
+    #thank-you-container .text-div {
+        margin-top: 2rem;
+    }
+
+
+    #result-p {
+        font-size: 1.4rem;
+    }
+}
