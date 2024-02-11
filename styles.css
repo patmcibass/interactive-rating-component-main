@@ -12,14 +12,13 @@
     - Mobile: 375px
     - Desktop: 1440px
 */
-
-
+    --gradient: radial-gradient(circle at top, #252d37 , #121417);
     --Orange: hsl(25, 97%, 53%);
     --White: hsl(0, 0%, 100%);
     --Light-Grey: hsl(217, 12%, 63%);
     --Medium-Grey: hsl(216, 12%, 54%);
-    --Dark-Blue: hsl(213, 19%, 18%);
-    --Very-Dark-Blue: hsl(216, 12%, 8%);
+    --Dark-Blue: #252d37;
+    --Very-Dark-Blue: #121417;
 }
 
 html {
@@ -30,7 +29,7 @@ html {
 body {
     width: 100vw;
     height: 100vh;
-    /* background-color: var(--Very-Dark-Blue); */
+    background-color: var(--Very-Dark-Blue);
 }
 
 main {
@@ -43,6 +42,7 @@ main {
 
 .hidden {
     display: none;
+    gap: 0;
     width: 0px;
     height: 0px;
     position: absolute;
@@ -52,9 +52,125 @@ main {
 }
 
 .container {
-    width: 300px;
+    width: 410px;
     display: flex;
     flex-direction: column;
+    background: var(--gradient);
+    border-radius: 2.5rem;
+    padding: 3rem;
+    gap: 3rem;
+}
+
+#ratings-container {
     align-items: start;
-    /* justify-content: space-between; */
+    justify-content: center;
+}
+
+
+#star-container {
+    background-color: var(--Dark-Blue);
+    padding: 1.5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text-div {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: .5rem;
+}
+
+ h1 {
+    color: var(--White);
+    font-size: 2.7rem;
+    font-weight: 700;
+}
+
+p {
+    color: var(--Medium-Grey);
+    font-size: 1.5rem;
+    line-height: 2.3rem;
+}
+
+form {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.ratings {
+    width: 5rem;
+    height: 5rem;
+    font-size: 1.8rem;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--Medium-Grey);
+    background-color: var(--Dark-Blue);
+}
+
+#submit {
+    width: 100%;
+    background-color: var(--Orange);
+    border: 1px solid black;
+    color: var(--White);
+    border-radius: 2.5rem;
+    padding: 1.3rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* Thank you page */
+
+#thank-you-container {
+    justify-content: cetner;
+    align-items: center;
+}
+
+#thank-you-container svg {
+    margin: 1rem;
+}
+
+#result {
+    background-color: var(--Dark-Blue);
+    padding: .5rem;
+    width: 19rem;
+    border-radius: 2rem;
+    margin-top: -1rem;
+}
+
+.orange {
+    color: var(--Orange);
+    text-align: center;
+}
+
+#thank-you-container .text-div {
+    text-align: center;
+}
+
+
+/* Active States */
+
+.ratings:hover {
+    background-color: var(--Orange);
+    color: var(--White);
+    cursor: pointer;
+}
+
+.clicked {
+    color: var(--White);
+    background-color: var(--Medium-Grey);
+}
+
+#submit:hover {
+    cursor: pointer;
+    background-color: var(--White);
+    color: var(--Orange);
 }
