@@ -42,6 +42,8 @@ const submitButtonClicked = () => {
         ratingsContainer.classList.add('hidden');
         thankYouContainer.classList.remove('hidden');
         thankYouContainer.classList.add('container');
+        ratingsContainer.ariaHidden = 'true';
+        thankYouContainer.ariaHidden = 'false';
     }
     else {
         alert('Please give us a rating.')
